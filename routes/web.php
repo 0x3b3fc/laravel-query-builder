@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('posts/create',[PostsController::class,'create']);
+Route::post('/posts/insert',[PostsController::class,'insert'])->name('posts.insert');
