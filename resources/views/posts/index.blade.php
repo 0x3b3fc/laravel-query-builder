@@ -6,8 +6,10 @@
     </thead>
     <tbody>
         @foreach($posts as $post)
-            <td>{{$post->title}}</td>
-            <td>{{$post->body}}</td>
+            <tr>
+                <td>{{$post->title}}</td>
+                <td>{{$post->body}}</td>
+            </tr>
         @endforeach
     </tbody>
 </table>

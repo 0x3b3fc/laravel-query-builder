@@ -19,6 +19,6 @@ class PostsController extends Controller
             'title'=>$request->input('title'),
             'body'=>$request->input('body'),
         ]);
-        return response('data added successfully');
+        return redirect('/posts');
     }
 }
