@@ -9,6 +9,10 @@
             <tr>
                 <td>{{$post->title}}</td>
                 <td>{{$post->body}}</td>
+                <td>
+                    <a href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
             </tr>
         @endforeach
     </tbody>

@@ -14,6 +14,10 @@ class PostsController extends Controller
     public function create(){
         return view('posts.create');
     }
+    public function edit($id){
+        $post = DB::table('posts')->find($id);
+        return view('posts.edit',compact('post'));
+    }
     public function insert(Request $request){
         DB::table('posts')->insert([
             'title'=>$request->input('title'),
@@ -21,4 +25,5 @@ class PostsController extends Controller
         ]);
         return redirect('/posts');
     }
+
 }

@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('posts/',[PostsController::class,'index'])->name('posts.index');
 Route::get('posts/create',[PostsController::class,'create']);
 Route::post('/posts/insert',[PostsController::class,'insert'])->name('posts.insert');
+Route::get('/posts/edit/{id}',[PostsController::class,'edit'])->name('posts.edit');
