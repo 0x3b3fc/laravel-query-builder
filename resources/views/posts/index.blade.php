@@ -11,7 +11,7 @@
                 <td>{{$post->body}}</td>
                 <td>
                     <a href="{{ route('posts.edit',$post->id) }}">Edit</a>
-                    <a href="#">Delete</a>
+                    <a href="{{ route('posts.destroy',$post->id) }}">Delete</a>
                 </td>
             </tr>
         @endforeach
