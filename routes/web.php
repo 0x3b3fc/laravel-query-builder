@@ -25,6 +25,7 @@ Route::controller(PostsController::class)->group(function (){
     Route::post('posts/update/{id}','update')->name('posts.update');
     Route::get('posts/delete/{id}','destroy')->name('posts.destroy');
     Route::get('posts/destroy/all','delete_all')->name('delete.all');
+    Route::get('posts/destroy/truncate','delete_truncate')->name('delete.truncate');
 });
 
 

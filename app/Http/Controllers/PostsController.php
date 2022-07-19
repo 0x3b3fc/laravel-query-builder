@@ -42,4 +42,11 @@ class PostsController extends Controller
         return redirect()->route('posts.index');
     }
 
+    public function delete_truncate()
+    {
+        DB::table('posts')->truncate();
+        return redirect()->route('posts.index');
+
+    }
+
 }
