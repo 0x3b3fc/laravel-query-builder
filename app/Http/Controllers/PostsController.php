@@ -25,5 +25,12 @@ class PostsController extends Controller
         ]);
         return redirect('/posts');
     }
+    public function update($id, Request $request){
+        DB::table('posts')->where('id',$id)->update([
+            'title'=>$request->input('title'),
+            'body'=>$request->input('body'),
+        ]);
+        return redirect()->route('posts.index');
+    }
 
 }
