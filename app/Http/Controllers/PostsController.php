@@ -37,5 +37,9 @@ class PostsController extends Controller
         DB::table('posts')->where('id',$id)->delete();
         return redirect()->route('posts.index');
     }
+    public function delete_all(){
+        DB::table('posts')->delete();
+        return redirect()->route('posts.index');
+    }
 
 }

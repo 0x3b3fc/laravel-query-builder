@@ -1,4 +1,8 @@
 <h1>All Posts</h1>
+<h3>
+    <a href="{{ route('posts.create') }}">Create Post</a>
+    <a href="{{ route('delete.all') }}">Delete All Posts</a>
+</h3>
 <table border="1">
     <thead>
         <th>Title</th>
